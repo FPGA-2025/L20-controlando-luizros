@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Permissão para scripts
+      run: chmod +x setup.sh run-all.sh
     - name: Teste Padrão
       id: teste-padrao
       uses: classroom-resources/autograding-command-grader@v1
